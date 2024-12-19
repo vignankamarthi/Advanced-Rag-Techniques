@@ -1,1 +1,1 @@
-# Advanced-Rag-Techniques
+# Improved-RAG-Techniques
