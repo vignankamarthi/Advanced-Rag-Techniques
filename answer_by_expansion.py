@@ -48,7 +48,7 @@ character_split_texts = character_splitter.split_text("\n\n".join(pdf_texts))
 #print(word_wrap(character_split_texts[0]))
 #print(f"\nTotal chunks: {len(character_split_texts)}")
 
-# 
+# Assigning 256 tokens per chunk, making the data more manageable to process. 
 token_splitter = SentenceTransformersTokenTextSplitter(
     chunk_overlap=0, tokens_per_chunk=256
 )
