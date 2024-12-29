@@ -77,7 +77,7 @@ chroma_collection.add(ids=ids, documents=token_split_texts)
 #print(count)
 
 # initial query
-query = "What was the total revenue for the year?"
+query = "What was the company's total revenue for the year?"
 
 # get the raw results from a simple inital query
 results = chroma_collection.query(query_texts=[query], n_results=5)
@@ -91,8 +91,8 @@ retrieved_documents = results["documents"][0]
 # A function utilizing OpenAI's models to generate a reponse 
 # in the context of a financial research assistant from the given query
 def augment_query_generated(query, model="gpt-3.5-turbo"):
-    prompt = """You are a helpful expert financial research assistant. 
-   Provide an example answer to the given question, that might be found in a document like an annual report."""
+    prompt = """You are a helpful expert and experienced financial research assistant. 
+   Provide an example answer to the given question, that might be found in a document or record like an annual report."""
     messages = [
         {
             "role": "system",
