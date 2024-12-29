@@ -32,7 +32,7 @@ pdf_texts = [p.extract_text().strip() for p in reader.pages]
 pdf_texts = [text for text in pdf_texts if text]
 # print(
 #     word_wrap(
-#         pdf_texts[0],
+#         pdf_texts[10],
 #         width=100,
 #     )
 # )
@@ -45,7 +45,7 @@ character_splitter = RecursiveCharacterTextSplitter(
 
 character_split_texts = character_splitter.split_text("\n\n".join(pdf_texts))
 
-#print(word_wrap(character_split_texts[0]))
+#print(word_wrap(character_split_texts[]))
 #print(f"\nTotal chunks: {len(character_split_texts)}")
 
 # Assigning 256 tokens per chunk, making the data more manageable to process. 
@@ -59,6 +59,7 @@ for text in character_split_texts:
 #print(word_wrap(token_split_texts[0]))
 #print(f"\nTotal chunks: {len(token_split_texts)}")
 
+# Creating the embedding function
 embedding_function = SentenceTransformerEmbeddingFunction()
 #print(embedding_function([token_split_texts [0]]))
 
