@@ -88,7 +88,7 @@ retrieved_documents = results["documents"][0]
 #    print(word_wrap(document))
 #    print("\n")
 
-# a function utilizing OpenAI's models to generate a reponse 
+# A function utilizing OpenAI's models to generate a reponse 
 # in the context of a financial research assistant from the given query
 def augment_query_generated(query, model="gpt-3.5-turbo"):
     prompt = """You are a helpful expert financial research assistant. 
