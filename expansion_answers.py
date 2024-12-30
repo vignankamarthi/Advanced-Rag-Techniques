@@ -149,7 +149,7 @@ projected_retrieved_embeddings = project_embeddings(
 )
 
 # Plotting the embeddings from the full dataset (derived from the entire document), the embeddings from the retrieved 
-# documents after inputting the joint query, the embeddings from the original query, and the embeddings from the orange query. 
+# documents after inputting the joint query, the embeddings from the original query, and the embeddings from the augmented query. 
 # The joint query is much closer to the retrieved documents than the original query.
 plt.figure()
 
